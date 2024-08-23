@@ -1,0 +1,50 @@
+-------------POST: decision----------------
+
+ {
+    "id": 101,
+    "zipcode": "85050",
+    "ssn": "101",
+    "dob": "12/12/1980",
+    "address": "Phoenix",
+    "phoneNumber": "1231231234",
+    "firstName": "Mahesh",
+    "lastName": "Kawale"
+  }
+  {
+    "id": 102,
+    "zipcode": "85050",
+    "ssn": "102",
+    "dob": "12/12/1980",
+    "address": "Phoenix",
+    "phoneNumber": "1231231234",
+    "firstName": "Test1",
+    "lastName": "Test1"
+  }
+  {
+    "id": 103,
+    "zipcode": "85050",
+    "ssn": "103",
+    "dob": "12/12/1980",
+    "address": "Phoenix",
+    "phoneNumber": "1231231234",
+    "firstName": "Test2",
+    "lastName": "Test2"
+  }
+  {
+    "id": 104,
+    "zipcode": "85032",
+    "ssn": "104",
+    "dob": "12/12/1980",
+    "address": "Phoenix",
+    "phoneNumber": "1231231234",
+    "firstName": "Test3",
+    "lastName": "Test3"
+  }
+
+-------------------POST : updateDecisionFlag--------------
+
+{ "decisionID": "1", "decisionName": "Good" }
+
+http://localhost:9090/graph?g0.expr=jvm_buffer_memory_used_bytes&g0.tab=1&g0.display_mode=lines&g0.show_exemplars=0&g0.range_input=1h
+
+http://localhost:8080/swagger-ui/index.html#/dream-bank-card-controller/getDecison
