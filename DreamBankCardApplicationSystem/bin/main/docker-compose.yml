@@ -1,0 +1,37 @@
+version: "1"
+services:
+  DreamBankMongoDB:
+    image: mongo:latest
+    container_name: "dreambankmongo"
+    ports:
+      - 27017:27017
+  DreamBankCardApplication:
+    image: dreambankcardapplication:1.0
+    container_name: "dreambankcardapplication"
+    ports:
+      - 8080:8080
+    links:
+      - DreamBankMongoDB
+  EquifaxService:
+    image: equifaxservice:1.0
+    container_name: "equifaxservice"
+    ports:
+      - 8081:8081
+  ExperianService:
+    image: experianservice:1.0
+    container_name: "experianservice"
+    ports:
+      - 8082:8082
+  TransunionService:
+    image: transunionservice:1.0
+    container_name: "transunionservice"
+    ports:
+      - 8083:8083
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - '9090:9090'
+    container_name: prometheus
+    restart: always
+    volumes:
+      - './prometheus.yml:/etc/prometheus/prometheus.yml'
